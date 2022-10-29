@@ -8,6 +8,7 @@
   [[_ b]]
   b)
 
+#_{:clj-kondo/ignore [:redefined-var]}
 (defn abs
   [[a b]]
   (Math/sqrt (+ (* a a) (* b b))))

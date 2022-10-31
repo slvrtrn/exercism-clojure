@@ -35,12 +35,3 @@
 (defn reset-name
   [r]
   (swap! r assoc :name (get-random-name)))
-
-(defn test
-  []
-  (let [a-robot (robot-name/robot)
-        its-original-name (robot-name/robot-name a-robot)
-        its-new-name (do (robot-name/reset-name a-robot)
-                         (robot-name/robot-name a-robot))]
-    (println its-new-name)
-    (println its-original-name)))
